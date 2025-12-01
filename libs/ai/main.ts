@@ -77,3 +77,20 @@ export const chat = async (
 
   return ai(model, options, "chat");
 };
+
+export const rerank = async (
+  query: string,
+  documents: string[],
+  top_n: number = 3
+) => {
+  console.log("[AI] Rerank");
+  const model = "baai-bge-reranker-v2-m3";
+  const options = {
+    query,
+    documents,
+    top_n,
+    return_documents: true,
+  };
+
+  return ai(model, options, "rerank");
+};
