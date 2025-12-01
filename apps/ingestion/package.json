@@ -1,0 +1,16 @@
+{
+  "name": "ingestion",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "ts-node main.ts"
+  },
+  "dependencies": {
+    "ai": "workspace:*",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.24",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}
