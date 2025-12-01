@@ -1,9 +1,5 @@
 // AI integration using Azion AI Inference
 import "dotenv/config";
-
-const AI_INFERENCE_BASE_URL = process.env.AI_INFERENCE_BASE_URL!;
-const IS_PROD = process.env.NODE_ENV === "production";
-
 declare global {
   // eslint-disable-next-line no-var
   var Azion: {
@@ -16,12 +12,16 @@ declare global {
 export const ai = async (
   model: string,
   options?: any,
-  type: "embedding" | "chat" | "rerank" = "chat"
+  type: "embedding" | "chat" | "rerank" = "chat",
+  forceFetch = false
 ) => {
-  if (IS_PROD) {
-    console.log("[AI] Using Azion AI Inference");
-    return Azion.AI.run(model, options);
-  }
+  const AI_INFERENCE_BASE_URL = process.env.AI_INFERENCE_BASE_URL!;
+  const IS_PROD = process.env.NODE_ENV === "production";
+
+  // if (!forceFetch && IS_PROD) {
+  //   console.log("[AI] Using Azion AI Inference");
+  //   return Azion.AI.run(model, options);
+  // }
 
   const body = {
     model,
@@ -47,7 +47,7 @@ export const ai = async (
   return response.json();
 };
 
-export const embedding = async (text: string, dimension: number = 1536) => {
+export const embedding = async (text: string, dimension: number = 1536, forceFetch = false) => {
   console.log("[AI] Embedding");
   // console.log("[AI] Embedding text: ", text);
 
@@ -58,39 +58,40 @@ export const embedding = async (text: string, dimension: number = 1536) => {
     dimension,
   };
 
-  return ai(model, options, "embedding");
+  return ai(model, options, "embedding", forceFetch);
 };
 
 export const chat = async (
   messages: {
     role: "user" | "assistant";
     content: string;
-  }[]
+  }[],
+  forceFetch = false
 ) => {
   console.log("[AI] Chat");
   // console.log("[AI] Chat messages: ", messages);
 
-  const model = "Qwen/Qwen3-30B-A3B-Instruct-2507-FP8";
+  const model = "casperhansen-mistral-small-24b-instruct-2501-awq";
   const options = {
     messages,
   };
 
-  return ai(model, options, "chat");
+  console.log("[AI] Chat options: ", forceFetch);
+
+  return ai(model, options, "chat", forceFetch);
 };
 
 export const rerank = async (
   query: string,
   documents: string[],
-  top_n: number = 3
+  forceFetch = false
 ) => {
   console.log("[AI] Rerank");
   const model = "baai-bge-reranker-v2-m3";
   const options = {
     query,
     documents,
-    top_n,
-    return_documents: true,
   };
 
-  return ai(model, options, "rerank");
+  return ai(model, options, "rerank", forceFetch);
 };

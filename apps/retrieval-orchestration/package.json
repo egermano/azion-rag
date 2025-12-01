@@ -5,6 +5,8 @@
   "main": "src/index.ts",
   "type": "module",
   "scripts": {
+    "dev": "DEBUG=true npx --yes edge-functions@5.3.0 dev",
+    "build": "npx --yes edge-functions@5.3.0 build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -13,9 +15,11 @@
   "dependencies": {
     "ai": "workspace:*",
     "azion": "^2.2.3",
+    "dotenv": "^17.2.3",
     "hono": "^4.5.3"
   },
   "devDependencies": {
+    "edge-functions": "^5.3.0",
     "typescript": "^5.4.2"
   }
 }
