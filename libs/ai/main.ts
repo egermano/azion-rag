@@ -48,7 +48,8 @@ export const ai = async (
 };
 
 export const embedding = async (text: string, dimension: number = 1536) => {
-  console.log("[AI] Embedding text: ", text);
+  console.log("[AI] Embedding");
+  // console.log("[AI] Embedding text: ", text);
 
   const model = "Qwen/Qwen3-Embedding-4B";
   const options = {
@@ -66,7 +67,8 @@ export const chat = async (
     content: string;
   }[]
 ) => {
-  console.log("[AI] Chat messages: ", messages);
+  console.log("[AI] Chat");
+  // console.log("[AI] Chat messages: ", messages);
 
   const model = "Qwen/Qwen3-30B-A3B-Instruct-2507-FP8";
   const options = {
