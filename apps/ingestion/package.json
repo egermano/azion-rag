@@ -6,6 +6,7 @@
   },
   "dependencies": {
     "ai": "workspace:*",
+    "azion": "^2.2.3",
     "dotenv": "^16.4.5"
   },
   "devDependencies": {
