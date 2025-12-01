@@ -44,6 +44,22 @@ importers:
         specifier: ^5.3.3
         version: 5.9.3
 
+  apps/retrieval-orchestration:
+    dependencies:
+      ai:
+        specifier: workspace:*
+        version: link:../../libs/ai
+      azion:
+        specifier: ^2.2.3
+        version: 2.2.3(@babel/core@7.28.5)(@fastly/js-compute@3.36.0(typescript@5.9.3))
+      hono:
+        specifier: ^4.5.3
+        version: 4.10.7
+    devDependencies:
+      typescript:
+        specifier: ^5.4.2
+        version: 5.9.3
+
   libs/ai:
     devDependencies:
       '@types/node':
@@ -1717,6 +1733,10 @@ packages:
 
   hmac-drbg@1.0.1:
     resolution: {integrity: sha512-Tti3gMqLdZfhOQY1Mzf/AanLiqh1WTiJgEj26ZuYQ9fbkLomzGchCws4FyrSd4VkpBfiNhaE1On+lOz894jvXg==}
+
+  hono@4.10.7:
+    resolution: {integrity: sha512-icXIITfw/07Q88nLSkB9aiUrd8rYzSweK681Kjo/TSggaGbOX4RRyxxm71v+3PC8C/j+4rlxGeoTRxQDkaJkUw==}
+    engines: {node: '>=16.9.0'}
 
   ieee754@1.2.1:
     resolution: {integrity: sha512-dcyqhDvX1C46lXZcVqCpK+FtMRQVdIMN6/Df5js2zouUsqG7I6sFxitIC+7KYK29KdXOLHdu9zL4sFnoVQnqaA==}
@@ -4276,6 +4296,8 @@ snapshots:
       hash.js: 1.1.7
       minimalistic-assert: 1.0.1
       minimalistic-crypto-utils: 1.0.1
+
+  hono@4.10.7: {}
 
   ieee754@1.2.1: {}
 
