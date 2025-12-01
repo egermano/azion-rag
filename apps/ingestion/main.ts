@@ -46,7 +46,7 @@ async function databaseInsert(chunk: DocumentChunk, embedding: number[]) {
   const safeContent = chunk.content.replace(/'/g, "''");
   const vectorStr = JSON.stringify(embedding);
 
-  const query = `INSERT INTO ${tableName} (filename, content, embedding) VALUES ('${chunk.metadata.filename}', '${safeContent}', '${vectorStr}');`;
+  const query = `INSERT INTO ${tableName} (filename, content, embedding) VALUES ('${chunk.metadata.filename}', '${safeContent}', vector('${vectorStr}'));`;
 
   // Save locally
   fs.appendFileSync(SQL_FILE, query + "\n");

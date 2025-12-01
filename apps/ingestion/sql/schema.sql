@@ -5,9 +5,8 @@ CREATE TABLE IF NOT EXISTS document_embeddings (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     filename TEXT NOT NULL,
     content TEXT NOT NULL,
-    -- Storing embedding as a JSON string (e.g., "[0.1, 0.2, ...]")
-    -- as Edge SQL might not have native vector type yet.
-    embedding TEXT, 
+    -- Storing embedding as F32_BLOB for Vector Search
+    embedding F32_BLOB(1536), 
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
