@@ -1,44 +1,70 @@
 import "dotenv/config";
 
 import * as aiLib from "ai";
+import { useExecute } from "azion/sql";
 import * as fs from "fs";
 import * as path from "path";
 
-// Configuration
+// Config
 const DATA_DIR = path.join(__dirname, "data");
+const SQL_FILE = path.join(__dirname, "sql/embedding-data.sql");
 const CHUNK_SIZE = 1000;
 const CHUNK_OVERLAP = CHUNK_SIZE * 0.1;
+
+const dbName = process.env.SQL_DATABASE_NAME!;
+const tableName = process.env.SQL_DATABASE_TABLE!;
+
+// Ensure SQL dir exists (minimal setup)
+fs.mkdirSync(path.dirname(SQL_FILE), { recursive: true });
 
 interface DocumentChunk {
   id: string;
   content: string;
-  metadata: {
-    filename: string;
-    chunkIndex: number;
-    charStart: number;
-    charEnd: number;
-  };
+  metadata: { filename: string; chunkIndex: number };
+}
+
+async function resetData() {
+  // reset the file SQL_FILE
+
+  console.log(`[DB] Resetting data...`);
+
+  try {
+    fs.writeFileSync(SQL_FILE, "");
+
+    const { error } = await useExecute(dbName, [`DELETE FROM ${tableName}`]);
+    if (error) console.error(`[DB] Error:`, error.message);
+    else console.log(`[DB] Reset data`);
+  } catch (err) {
+    console.error(`[DB] Exception:`, err);
+  }
 }
 
 /**
- * Simulates inserting data into Azion Edge SQL
+ * Insert into Azion Edge SQL & save to file
  */
-async function mockInsertDatabase(chunk: DocumentChunk, embedding: number[]) {
-  // Simulate latency
-  await new Promise((resolve) => setTimeout(resolve, 50));
+async function databaseInsert(chunk: DocumentChunk, embedding: number[]) {
+  const safeContent = chunk.content.replace(/'/g, "''");
+  const vectorStr = JSON.stringify(embedding);
 
-  console.log(
-    `[DB] Inserted: ${chunk.metadata.filename} (Chunk #${chunk.metadata.chunkIndex}) - Vector Size: ${embedding.length}`
-  );
+  const query = `INSERT INTO ${tableName} (filename, content, embedding) VALUES ('${chunk.metadata.filename}', '${safeContent}', '${vectorStr}');`;
+
+  // Save locally
+  fs.appendFileSync(SQL_FILE, query + "\n");
+
+  // Insert to DB
+  try {
+    const { error } = await useExecute(dbName, [query]);
+    if (error) console.error(`[DB] Error:`, error.message);
+    else console.log(`[DB] Inserted chunk #${chunk.metadata.chunkIndex}`);
+  } catch (err) {
+    console.error(`[DB] Exception:`, err);
+  }
 }
 
 /**
- * Splits text into chunks with overlap
+ * Split text into chunks
  */
-function chunkTextWithOverlap(
-  filename: string,
-  content: string
-): DocumentChunk[] {
+function chunkText(filename: string, content: string): DocumentChunk[] {
   const chunks: DocumentChunk[] = [];
   let start = 0;
 
@@ -47,14 +73,8 @@ function chunkTextWithOverlap(
     chunks.push({
       id: `${filename}-${chunks.length}`,
       content: content.slice(start, end),
-      metadata: {
-        filename,
-        chunkIndex: chunks.length,
-        charStart: start,
-        charEnd: end,
-      },
+      metadata: { filename, chunkIndex: chunks.length },
     });
-
     if (end === content.length) break;
     start += CHUNK_SIZE - CHUNK_OVERLAP;
   }
@@ -62,43 +82,31 @@ function chunkTextWithOverlap(
 }
 
 /**
- * Main Ingestion Logic
+ * Main
  */
-async function runIngestion() {
+async function run() {
   console.log("🚀 Starting Ingestion...");
-  console.log(`📂 Dir: ${DATA_DIR}`);
-
-  if (!fs.existsSync(DATA_DIR)) throw new Error("Data directory not found");
+  
+  await resetData();
 
   const files = fs.readdirSync(DATA_DIR).filter((f) => f.endsWith(".md"));
-  console.log(`📄 Found ${files.length} markdown files`);
 
   for (const file of files) {
-    console.log(`\nProcessing: ${file}`);
-    try {
-      const content = fs.readFileSync(path.join(DATA_DIR, file), "utf-8");
-      const chunks = chunkTextWithOverlap(file, content);
-      console.log(`-> Created ${chunks.length} chunks`);
+    console.log(`Processing ${file}...`);
+    const content = fs.readFileSync(path.join(DATA_DIR, file), "utf-8");
+    const chunks = chunkText(file, content);
 
-      for (const chunk of chunks) {
-        try {
-          // Generate Embedding
-          const { data } = await aiLib.embedding(chunk.content);
-          const vector = data?.[0]?.embedding;
+    for (const chunk of chunks) {
+      // Clean newlines before embedding and insertion
+      chunk.content = chunk.content.replace(/(\n|\t|\r)/g, " ");
 
-          if (!vector) throw new Error("No embedding returned from AI");
-
-          // Insert into DB
-          await mockInsertDatabase(chunk, vector);
-        } catch (err) {
-          console.error(`❌ Error chunk #${chunk.metadata.chunkIndex}:`, err);
-        }
+      const { data } = await aiLib.embedding(chunk.content);
+      if (data?.[0]?.embedding) {
+        await databaseInsert(chunk, data[0].embedding);
       }
-    } catch (error) {
-      console.error(`❌ Error processing file ${file}:`, error);
     }
   }
-  console.log("\n✅ Ingestion Complete");
+  console.log("✅ Done!");
 }
 
-runIngestion().catch(console.error);
+run().catch(console.error);
