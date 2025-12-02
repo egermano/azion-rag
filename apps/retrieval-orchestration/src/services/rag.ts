@@ -34,7 +34,7 @@ export const search = async (
 
   // 1. Generate Embedding
   // We force fetch to ensure we hit the API if needed
-  const embedded = await embedding(query, 1536, true) as any;
+  const embedded = await embedding(query) as any;
   const vector = embedded?.data?.[0]?.embedding;
 
   if (!vector) {
@@ -78,7 +78,7 @@ export const search = async (
   // 3. Rerank (Optional)
   if (useRerank && results.length > 0) {
     const documents = results.map((r) => r.content);
-    const reranked = await rerank(query, documents, true) as any;
+    const reranked = await rerank(query, documents) as any;
 
     if (reranked?.results) {
       // Map rerank scores back to results and sort
@@ -105,7 +105,7 @@ export const ask = async (question: string): Promise<RagResponse> => {
   // 1. Retrieve Context
   // We use the search function but we might want to apply a similarity threshold
   // For simplicity in this demo, we'll use the top results from search
-  const contextResults = await search(question, 5, true);
+  const contextResults = await search(question, 5);
   
   // Filter out low relevance if needed (e.g. similarity < 0.2 is handled in SQL in the original code, 
   // but let's do it here or just rely on top K)
@@ -133,7 +133,7 @@ export const ask = async (question: string): Promise<RagResponse> => {
   ];
 
   // Force fetch = true
-  const response = await chat(messages as any, true) as any;
+  const response = await chat(messages as any) as any;
   const answer = response?.choices?.[0]?.message?.content || "No answer generated";
 
   return {
