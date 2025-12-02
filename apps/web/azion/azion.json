@@ -1,0 +1,57 @@
+{
+  "name": "rag-chat-demo",
+  "bucket": "rag-chat-demo",
+  "preset": "react",
+  "env": "production",
+  "prefix": "20251202182309",
+  "not-first-run": true,
+  "function": [],
+  "application": {
+    "id": 1764713971,
+    "name": "__DEFAULT__"
+  },
+  "domain": {
+    "id": 0,
+    "name": "__DEFAULT__",
+    "domain_name": "",
+    "url": ""
+  },
+  "rt-purge": {
+    "purge_on_publish": true
+  },
+  "origin": null,
+  "rules-engine": {
+    "created": false,
+    "rules": [
+      {
+        "id": 501038,
+        "name": "Deliver Static Assets",
+        "phase": "request"
+      },
+      {
+        "id": 501039,
+        "name": "Redirect to index.html",
+        "phase": "request"
+      }
+    ]
+  },
+  "cache-settings": [],
+  "workloads": {
+    "id": 1764714818,
+    "name": "rag-chat-demo",
+    "domains": [],
+    "url": "https://clc4fojzyiw.map.azionedge.net",
+    "deployment_id": [
+      {
+        "id": 172843,
+        "name": "rag-chat-demo"
+      }
+    ]
+  },
+  "connectors": [
+    {
+      "id": 1909,
+      "name": "rag-chat-demo"
+    }
+  ]
+}
