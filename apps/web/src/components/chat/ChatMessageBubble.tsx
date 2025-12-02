@@ -1,10 +1,10 @@
-import { User, Bot } from "lucide-react";
 import { cn } from "@/lib/utils";
+import type { ChatMessage, ContextItem } from "@/types/rag";
+import { Bot, User } from "lucide-react";
+import { useState } from "react";
 import { AnswerContent } from "./AnswerContent";
 import { ConfidenceIndicator } from "./ConfidenceIndicator";
 import { ReferenceCard } from "./ReferenceCard";
-import type { ChatMessage, ConfidenceLevel, ContextItem } from "@/types/rag";
-import { useState } from "react";
 
 interface ChatMessageBubbleProps {
   message: ChatMessage;
@@ -114,7 +114,7 @@ export const ChatMessageBubble = ({ message }: ChatMessageBubbleProps) => {
         {!isUser && (!message.context || message.context.length === 0) && (
           <div className="flex items-center gap-2 text-xs text-muted-foreground bg-muted/50 px-3 py-2 rounded-lg">
             <span className="w-1.5 h-1.5 rounded-full bg-confidence-low" />
-            No sources found — verify externally
+            Nenhuma fonte encontrada — verificar externamente
           </div>
         )}
 
