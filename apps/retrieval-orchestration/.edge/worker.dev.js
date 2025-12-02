@@ -61,18 +61,18 @@ var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__ge
 ));
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 
-// ../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3_/node_modules/azion/packages/_global_polyfill-setImmediate.js
+// ../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3__@swc+core@1.15.3/node_modules/azion/packages/_global_polyfill-setImmediate.js
 var import_node_timers;
 var init_global_polyfill_setImmediate = __esm({
-  "../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3_/node_modules/azion/packages/_global_polyfill-setImmediate.js"() {
+  "../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3__@swc+core@1.15.3/node_modules/azion/packages/_global_polyfill-setImmediate.js"() {
     import_node_timers = __toESM(require_timers_browserify());
     globalThis.setImmediate = import_node_timers.setImmediate;
   }
 });
 
-// ../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3_/node_modules/azion/packages/bundler/src/polyfills/azion/env-vars/env-vars.polyfills.js
+// ../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3__@swc+core@1.15.3/node_modules/azion/packages/bundler/src/polyfills/azion/env-vars/env-vars.polyfills.js
 var init_env_vars_polyfills = __esm({
-  "../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3_/node_modules/azion/packages/bundler/src/polyfills/azion/env-vars/env-vars.polyfills.js"() {
+  "../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3__@swc+core@1.15.3/node_modules/azion/packages/bundler/src/polyfills/azion/env-vars/env-vars.polyfills.js"() {
     globalThis.Azion = globalThis.Azion || {};
     globalThis.Azion.env = {};
     globalThis.Azion.env.get = (key) => {
@@ -82,10 +82,10 @@ var init_env_vars_polyfills = __esm({
   }
 });
 
-// ../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3_/node_modules/azion/packages/bundler/src/polyfills/azion/network-list/network-list.polyfills.js
+// ../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3__@swc+core@1.15.3/node_modules/azion/packages/bundler/src/polyfills/azion/network-list/network-list.polyfills.js
 var instanceNetworkList;
 var init_network_list_polyfills = __esm({
-  "../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3_/node_modules/azion/packages/bundler/src/polyfills/azion/network-list/network-list.polyfills.js"() {
+  "../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3__@swc+core@1.15.3/node_modules/azion/packages/bundler/src/polyfills/azion/network-list/network-list.polyfills.js"() {
     globalThis.Azion = globalThis.Azion || {};
     globalThis.Azion.networkList = {};
     instanceNetworkList = new NETWORK_LIST_CONTEXT(false);
@@ -95,10 +95,10 @@ var init_network_list_polyfills = __esm({
   }
 });
 
-// ../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3_/node_modules/azion/packages/bundler/src/polyfills/azion/storage/storage.polyfills.js
+// ../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3__@swc+core@1.15.3/node_modules/azion/packages/bundler/src/polyfills/azion/storage/storage.polyfills.js
 var PRIVATE_CONSTRUCTOR, Storage, StorageObject, StorageObjectList;
 var init_storage_polyfills = __esm({
-  "../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3_/node_modules/azion/packages/bundler/src/polyfills/azion/storage/storage.polyfills.js"() {
+  "../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3__@swc+core@1.15.3/node_modules/azion/packages/bundler/src/polyfills/azion/storage/storage.polyfills.js"() {
     PRIVATE_CONSTRUCTOR = Symbol("PRIVATE_CONSTRUCTOR");
     Storage = class {
       static {
@@ -243,10 +243,10 @@ var init_storage_polyfills = __esm({
   }
 });
 
-// ../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3_/node_modules/azion/packages/unenv-preset/src/polyfills/node/globals/console.js
+// ../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3__@swc+core@1.15.3/node_modules/azion/packages/unenv-preset/src/polyfills/node/globals/console.js
 var _console, console_default;
 var init_console = __esm({
-  "../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3_/node_modules/azion/packages/unenv-preset/src/polyfills/node/globals/console.js"() {
+  "../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3__@swc+core@1.15.3/node_modules/azion/packages/unenv-preset/src/polyfills/node/globals/console.js"() {
     init_global_polyfill_process();
     init_global_polyfill_global();
     init_global_polyfill_Buffer();
@@ -280,18 +280,18 @@ var init_console = __esm({
   }
 });
 
-// ../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3_/node_modules/azion/packages/_global_polyfill-console.js
+// ../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3__@swc+core@1.15.3/node_modules/azion/packages/_global_polyfill-console.js
 var init_global_polyfill_console = __esm({
-  "../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3_/node_modules/azion/packages/_global_polyfill-console.js"() {
+  "../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3__@swc+core@1.15.3/node_modules/azion/packages/_global_polyfill-console.js"() {
     init_console();
     globalThis.console = console_default;
   }
 });
 
-// ../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3_/node_modules/azion/packages/unenv-preset/src/polyfills/node/globals/clear-interval.js
+// ../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3__@swc+core@1.15.3/node_modules/azion/packages/unenv-preset/src/polyfills/node/globals/clear-interval.js
 var _clearInterval, clear_interval_default;
 var init_clear_interval = __esm({
-  "../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3_/node_modules/azion/packages/unenv-preset/src/polyfills/node/globals/clear-interval.js"() {
+  "../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3__@swc+core@1.15.3/node_modules/azion/packages/unenv-preset/src/polyfills/node/globals/clear-interval.js"() {
     init_global_polyfill_process();
     init_global_polyfill_global();
     init_global_polyfill_Buffer();
@@ -326,18 +326,18 @@ var init_clear_interval = __esm({
   }
 });
 
-// ../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3_/node_modules/azion/packages/_global_polyfill-clearInterval.js
+// ../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3__@swc+core@1.15.3/node_modules/azion/packages/_global_polyfill-clearInterval.js
 var init_global_polyfill_clearInterval = __esm({
-  "../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3_/node_modules/azion/packages/_global_polyfill-clearInterval.js"() {
+  "../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3__@swc+core@1.15.3/node_modules/azion/packages/_global_polyfill-clearInterval.js"() {
     init_clear_interval();
     globalThis.clearInterval = clear_interval_default;
   }
 });
 
-// ../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3_/node_modules/azion/packages/unenv-preset/src/polyfills/node/globals/set-interval.js
+// ../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3__@swc+core@1.15.3/node_modules/azion/packages/unenv-preset/src/polyfills/node/globals/set-interval.js
 var _setInterval, _clearInterval2, set_interval_default;
 var init_set_interval = __esm({
-  "../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3_/node_modules/azion/packages/unenv-preset/src/polyfills/node/globals/set-interval.js"() {
+  "../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3__@swc+core@1.15.3/node_modules/azion/packages/unenv-preset/src/polyfills/node/globals/set-interval.js"() {
     init_global_polyfill_process();
     init_global_polyfill_global();
     init_global_polyfill_Buffer();
@@ -376,9 +376,9 @@ var init_set_interval = __esm({
   }
 });
 
-// ../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3_/node_modules/azion/packages/_global_polyfill-setInterval.js
+// ../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3__@swc+core@1.15.3/node_modules/azion/packages/_global_polyfill-setInterval.js
 var init_global_polyfill_setInterval = __esm({
-  "../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3_/node_modules/azion/packages/_global_polyfill-setInterval.js"() {
+  "../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3__@swc+core@1.15.3/node_modules/azion/packages/_global_polyfill-setInterval.js"() {
     init_set_interval();
     globalThis.setInterval = set_interval_default;
   }
@@ -686,9 +686,9 @@ var init_performance2 = __esm({
   }
 });
 
-// ../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3_/node_modules/azion/packages/_global_polyfill-performance.js
+// ../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3__@swc+core@1.15.3/node_modules/azion/packages/_global_polyfill-performance.js
 var init_global_polyfill_performance = __esm({
-  "../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3_/node_modules/azion/packages/_global_polyfill-performance.js"() {
+  "../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3__@swc+core@1.15.3/node_modules/azion/packages/_global_polyfill-performance.js"() {
     init_performance2();
     globalThis.performance = performance_default;
   }
@@ -2349,10 +2349,10 @@ var init_process2 = __esm({
   }
 });
 
-// ../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3_/node_modules/azion/packages/unenv-preset/src/polyfills/node/globals/path-filename.js
+// ../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3__@swc+core@1.15.3/node_modules/azion/packages/unenv-preset/src/polyfills/node/globals/path-filename.js
 var path_filename_default;
 var init_path_filename = __esm({
-  "../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3_/node_modules/azion/packages/unenv-preset/src/polyfills/node/globals/path-filename.js"() {
+  "../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3__@swc+core@1.15.3/node_modules/azion/packages/unenv-preset/src/polyfills/node/globals/path-filename.js"() {
     init_global_polyfill_process();
     init_global_polyfill_global();
     init_global_polyfill_Buffer();
@@ -2373,9 +2373,9 @@ var init_path_filename = __esm({
   }
 });
 
-// ../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3_/node_modules/azion/packages/_global_polyfill-__filename.js
+// ../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3__@swc+core@1.15.3/node_modules/azion/packages/_global_polyfill-__filename.js
 var init_global_polyfill_filename = __esm({
-  "../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3_/node_modules/azion/packages/_global_polyfill-__filename.js"() {
+  "../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3__@swc+core@1.15.3/node_modules/azion/packages/_global_polyfill-__filename.js"() {
     init_path_filename();
     globalThis.__filename = path_filename_default;
   }
@@ -2713,10 +2713,10 @@ var init_path = __esm({
   }
 });
 
-// ../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3_/node_modules/azion/packages/unenv-preset/src/polyfills/node/globals/path-dirname.js
+// ../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3__@swc+core@1.15.3/node_modules/azion/packages/unenv-preset/src/polyfills/node/globals/path-dirname.js
 var path_dirname_default;
 var init_path_dirname = __esm({
-  "../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3_/node_modules/azion/packages/unenv-preset/src/polyfills/node/globals/path-dirname.js"() {
+  "../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3__@swc+core@1.15.3/node_modules/azion/packages/unenv-preset/src/polyfills/node/globals/path-dirname.js"() {
     init_global_polyfill_process();
     init_global_polyfill_global();
     init_global_polyfill_Buffer();
@@ -2738,9 +2738,9 @@ var init_path_dirname = __esm({
   }
 });
 
-// ../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3_/node_modules/azion/packages/_global_polyfill-__dirname.js
+// ../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3__@swc+core@1.15.3/node_modules/azion/packages/_global_polyfill-__dirname.js
 var init_global_polyfill_dirname = __esm({
-  "../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3_/node_modules/azion/packages/_global_polyfill-__dirname.js"() {
+  "../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3__@swc+core@1.15.3/node_modules/azion/packages/_global_polyfill-__dirname.js"() {
     init_path_dirname();
     globalThis.__dirname = path_dirname_default;
   }
@@ -2982,10 +2982,10 @@ var require_timers_browserify = __commonJS({
   }
 });
 
-// ../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3_/node_modules/azion/packages/_global_polyfill-clearImmediate.js
+// ../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3__@swc+core@1.15.3/node_modules/azion/packages/_global_polyfill-clearImmediate.js
 var import_node_timers2;
 var init_global_polyfill_clearImmediate = __esm({
-  "../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3_/node_modules/azion/packages/_global_polyfill-clearImmediate.js"() {
+  "../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3__@swc+core@1.15.3/node_modules/azion/packages/_global_polyfill-clearImmediate.js"() {
     import_node_timers2 = __toESM(require_timers_browserify());
     globalThis.clearImmediate = import_node_timers2.clearImmediate;
   }
@@ -5015,9 +5015,9 @@ var init_buffer2 = __esm({
   }
 });
 
-// ../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3_/node_modules/azion/packages/_global_polyfill-Buffer.js
+// ../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3__@swc+core@1.15.3/node_modules/azion/packages/_global_polyfill-Buffer.js
 var init_global_polyfill_Buffer = __esm({
-  "../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3_/node_modules/azion/packages/_global_polyfill-Buffer.js"() {
+  "../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3__@swc+core@1.15.3/node_modules/azion/packages/_global_polyfill-Buffer.js"() {
     init_buffer2();
     globalThis.Buffer = Buffer3;
   }
@@ -5045,17 +5045,17 @@ var init_globalthis = __esm({
   }
 });
 
-// ../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3_/node_modules/azion/packages/_global_polyfill-global.js
+// ../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3__@swc+core@1.15.3/node_modules/azion/packages/_global_polyfill-global.js
 var init_global_polyfill_global = __esm({
-  "../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3_/node_modules/azion/packages/_global_polyfill-global.js"() {
+  "../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3__@swc+core@1.15.3/node_modules/azion/packages/_global_polyfill-global.js"() {
     init_globalthis();
     globalThis.global = globalthis_default;
   }
 });
 
-// ../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3_/node_modules/azion/packages/unenv-preset/src/polyfills/node/globals/process.cjs
+// ../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3__@swc+core@1.15.3/node_modules/azion/packages/unenv-preset/src/polyfills/node/globals/process.cjs
 var require_process = __commonJS({
-  "../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3_/node_modules/azion/packages/unenv-preset/src/polyfills/node/globals/process.cjs"(exports, module) {
+  "../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3__@swc+core@1.15.3/node_modules/azion/packages/unenv-preset/src/polyfills/node/globals/process.cjs"(exports, module) {
     init_global_polyfill_process();
     init_global_polyfill_global();
     init_global_polyfill_Buffer();
@@ -5260,16 +5260,16 @@ var require_process = __commonJS({
   }
 });
 
-// ../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3_/node_modules/azion/packages/_global_polyfill-process.js
+// ../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3__@swc+core@1.15.3/node_modules/azion/packages/_global_polyfill-process.js
 var import_process4;
 var init_global_polyfill_process = __esm({
-  "../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3_/node_modules/azion/packages/_global_polyfill-process.js"() {
+  "../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3__@swc+core@1.15.3/node_modules/azion/packages/_global_polyfill-process.js"() {
     import_process4 = __toESM(require_process());
     globalThis.process = import_process4.default;
   }
 });
 
-// ../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3_/node_modules/azion/packages/bundler/src/polyfills/fs/promises/promises.polyfills.js
+// ../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3__@swc+core@1.15.3/node_modules/azion/packages/bundler/src/polyfills/fs/promises/promises.polyfills.js
 async function open(path, ...args) {
   path = join(BUILD_PATH_PREFIX, path);
   return FS_CONTEXT.promises.open(path, ...args);
@@ -5323,7 +5323,7 @@ async function realpath(src, ...args) {
 }
 var localFsPromises, BUILD_PATH_PREFIX, constants, promises_polyfills_default;
 var init_promises_polyfills = __esm({
-  "../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3_/node_modules/azion/packages/bundler/src/polyfills/fs/promises/promises.polyfills.js"() {
+  "../../node_modules/.pnpm/azion@1.20.11_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3__@swc+core@1.15.3/node_modules/azion/packages/bundler/src/polyfills/fs/promises/promises.polyfills.js"() {
     init_global_polyfill_process();
     init_global_polyfill_global();
     init_global_polyfill_Buffer();
@@ -6620,7 +6620,7 @@ var require_cli_options = __commonJS({
   }
 });
 
-// src/azion-index-20251201.temp.ts
+// src/azion-index-20251202.temp.ts
 init_global_polyfill_process();
 init_global_polyfill_global();
 init_global_polyfill_Buffer();
@@ -8800,7 +8800,7 @@ var rerank = /* @__PURE__ */ __name(async (query, documents, forceFetch = false)
   return ai(model, options, "rerank", forceFetch);
 }, "rerank");
 
-// ../../node_modules/.pnpm/azion@2.2.3_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3_/node_modules/azion/packages/sql/dist/index.mjs
+// ../../node_modules/.pnpm/azion@2.2.3_@babel+core@7.28.5_@fastly+js-compute@3.36.0_typescript@5.9.3__@swc+core@1.15.3/node_modules/azion/packages/sql/dist/index.mjs
 init_global_polyfill_process();
 init_global_polyfill_global();
 init_global_polyfill_Buffer();
@@ -9077,7 +9077,7 @@ Question: ${question}`
   };
 }, "ask");
 
-// src/azion-index-20251201.temp.ts
+// src/azion-index-20251202.temp.ts
 var app = new Hono2();
 app.use("*", cors());
 app.get("/", (c) => c.text("RAG Retrieval Orchestration API"));
