@@ -150,3 +150,8 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+#Paths added by Azion CLI
+.edge/
+.vulcan
+.open-next
