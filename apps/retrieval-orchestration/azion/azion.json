@@ -1,19 +1,11 @@
 {
   "name": "rag-demo-retrieval",
   "bucket": "",
-  "preset": "javascript",
+  "preset": "typescript",
   "env": "production",
   "prefix": "",
   "not-first-run": false,
-  "function": {
-    "id": 0,
-    "name": "__DEFAULT__",
-    "file": "./out/worker.js",
-    "args": "./azion/args.json",
-    "instance-id": 0,
-    "instance-name": "__DEFAULT__",
-    "cache-id": 0
-  },
+  "function": [],
   "application": {
     "id": 0,
     "name": "__DEFAULT__"
@@ -32,5 +24,13 @@
     "created": false,
     "rules": null
   },
-  "cache-settings": null
+  "cache-settings": null,
+  "workloads": {
+    "id": 0,
+    "name": "",
+    "domains": null,
+    "url": "",
+    "deployment_id": null
+  },
+  "connectors": null
 }

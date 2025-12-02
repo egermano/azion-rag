@@ -5,7 +5,14 @@ import { ask, search } from "./services/rag";
 
 const app = new Hono();
 
-app.use("*", cors());
+app.use(
+  cors({
+    origin: ["http://localhost:8080", "https://clc4fojzyiw.map.azionedge.net"],
+    allowMethods: ["GET", "POST", "OPTIONS"],
+    allowHeaders: ["Content-Type", "Authorization"],
+    credentials: true,
+  })
+);
 
 app.get("/", (c) => c.text("RAG Retrieval Orchestration API"));
 
@@ -48,4 +55,3 @@ app.post("/ask", async (c) => {
 });
 
 fire(app);
-
