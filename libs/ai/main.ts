@@ -18,10 +18,10 @@ export const ai = async (
   const AI_INFERENCE_BASE_URL = process.env.AI_INFERENCE_BASE_URL!;
   const IS_PROD = process.env.NODE_ENV === "production";
 
-  // if (!forceFetch && IS_PROD) {
-  //   console.log("[AI] Using Azion AI Inference");
-  //   return Azion.AI.run(model, options);
-  // }
+  if (!forceFetch && IS_PROD) {
+    console.log("[AI] Using Azion AI Inference");
+    return Azion.AI.run(model, options);
+  }
 
   const body = {
     model,
