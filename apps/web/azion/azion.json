@@ -3,7 +3,7 @@
   "bucket": "rag-chat-demo",
   "preset": "react",
   "env": "production",
-  "prefix": "20251202182309",
+  "prefix": "20251203145740",
   "not-first-run": true,
   "function": [],
   "application": {

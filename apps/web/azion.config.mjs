@@ -25,7 +25,7 @@ export default {
   storage: [
     {
       name: 'rag-chat-demo',
-      prefix: '20251202182309',
+      prefix: '20251203145740',
       dir: './.edge/assets',
       edgeAccess: 'read_only'
     }
@@ -37,7 +37,7 @@ export default {
       type: 'storage',
       attributes: {
         bucket: 'rag-chat-demo',
-        prefix: '20251202182309'
+        prefix: '20251203145740'
       }
     }
   ],
